@@ -6,9 +6,10 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Admin\Wp_Plugin_Bp_Admin
  */
+ namespace Wp_Plugin_Bp\Admin;
 
 /**
  * The admin-specific functionality of the plugin.
@@ -16,11 +17,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Admin\Wp_Plugin_Bp_Admin
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Admin {
+class Wp_Plugin_Bp_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -73,7 +74,7 @@ class Plugin_Name_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wp-plugin-bp-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +97,7 @@ class Plugin_Name_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-plugin-bp-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
