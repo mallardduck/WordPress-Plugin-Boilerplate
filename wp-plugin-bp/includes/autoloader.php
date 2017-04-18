@@ -5,7 +5,7 @@
  * @package Wp_Plugin_Bp\Includes
  */
 
-namespace LiquidWeb_Newer_Tag_Cloud\Includes;
+namespace Wp_Plugin_Bp\Includes;
 
 /**
  * Automatically loads the specified file.

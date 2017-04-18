@@ -6,9 +6,10 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Lib
  */
+namespace Wp_Plugin_Bp\Lib;
 
 /**
  * Fired during plugin deactivation.
@@ -16,11 +17,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Lib
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Deactivator {
+class Wp_Plugin_Bp_Deactivator {
 
 	/**
 	 * Short Description. (use period)

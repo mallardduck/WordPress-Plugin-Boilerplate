@@ -9,9 +9,13 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Lib
  */
+namespace Wp_Plugin_Bp\Lib;
+
+use Wp_Plugin_Bp\Admin\Wp_Plugin_Bp_Admin;
+use Wp_Plugin_Bp\Front\Wp_Plugin_Bp_Front;
 
 /**
  * The core plugin class.
@@ -23,11 +27,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Lib
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name {
+class Wp_Plugin_Bp {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +39,7 @@ class Plugin_Name {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Plugin_Name_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Wp_Plugin_Bp_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -68,7 +72,7 @@ class Plugin_Name {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'plugin-name';
+		$this->plugin_name = 'wp-plugin-bp';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -83,10 +87,10 @@ class Plugin_Name {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-	 * - Plugin_Name_i18n. Defines internationalization functionality.
-	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
-	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
+	 * - Wp_Plugin_Bp_Loader. Orchestrates the hooks of the plugin.
+	 * - Wp_Plugin_Bp_i18n. Defines internationalization functionality.
+	 * - Wp_Plugin_Bp_Admin. Defines all hooks for the admin area.
+	 * - Wp_Plugin_Bp_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -95,38 +99,13 @@ class Plugin_Name {
 	 * @access   private
 	 */
 	private function load_dependencies() {
-
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-plugin-name-loader.php';
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-plugin-name-i18n.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the admin area.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-plugin-name-admin.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-plugin-name-public.php';
-
-		$this->loader = new Plugin_Name_Loader();
-
+		$this->loader = new Wp_Plugin_Bp_Loader();
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Plugin_Name_i18n class in order to set the domain and to register the hook
+	 * Uses the Wp_Plugin_Bp_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -134,7 +113,7 @@ class Plugin_Name {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Plugin_Name_i18n();
+		$plugin_i18n = new Wp_Plugin_Bp_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -149,7 +128,7 @@ class Plugin_Name {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Plugin_Name_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Wp_Plugin_Bp_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -165,7 +144,7 @@ class Plugin_Name {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Plugin_Name_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Wp_Plugin_Bp_Front( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -196,7 +175,7 @@ class Plugin_Name {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Plugin_Name_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Wp_Plugin_Bp_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

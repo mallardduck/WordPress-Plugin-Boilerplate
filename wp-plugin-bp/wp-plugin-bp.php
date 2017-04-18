@@ -10,7 +10,7 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Plugin_Name
+ * @package           Wp_Plugin_Bp
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
@@ -43,7 +43,7 @@ use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Deactivator;
  * The code that runs during plugin activation.
  * This action is documented in includes/class-plugin-name-activator.php
  */
-function activate_plugin_name() {
+function activate_wp_plugin_bp() {
 	Wp_Plugin_Bp_Activator::activate();
 }
 
@@ -51,18 +51,18 @@ function activate_plugin_name() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-plugin-name-deactivator.php
  */
-function deactivate_plugin_name() {
+function deactivate_wp_plugin_bp() {
 	Wp_Plugin_Bp_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, __NAMESPACE__ . '\\activate_plugin_name' );
-register_deactivation_hook( __FILE__, __NAMESPACE__ . '\\deactivate_plugin_name' );
+register_activation_hook( __FILE__, __NAMESPACE__ . '\\activate_wp_plugin_bp' );
+register_deactivation_hook( __FILE__, __NAMESPACE__ . '\\deactivate_wp_plugin_bp' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-add_action('plugins_loaded', __NAMESPACE__ . '\\run_newer_tag_cloud');
+add_action('plugins_loaded', __NAMESPACE__ . '\\run_plugin_name');
 
 /**
  * Begins execution of the plugin.

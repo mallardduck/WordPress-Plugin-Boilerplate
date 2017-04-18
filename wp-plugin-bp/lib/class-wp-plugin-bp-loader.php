@@ -6,9 +6,10 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Lib
  */
+namespace Wp_Plugin_Bp\Lib;
 
 /**
  * Register all actions and filters for the plugin.
@@ -17,11 +18,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Wp_Plugin_Bp
+ * @subpackage Wp_Plugin_Bp\Lib
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Loader {
+class Wp_Plugin_Bp_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
