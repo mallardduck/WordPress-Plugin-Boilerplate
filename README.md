@@ -64,11 +64,13 @@ For reference, [here's a discussion](http://make.wordpress.org/themes/2013/03/04
 
 Note that if you include your own classes, or third-party libraries, there are three locations in which said files may go:
 
-* `wp-plugin-bp/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
+* `wp-plugin-bp/lib` is where functionality shared between the admin area and the public-facing parts of the site reside
 * `wp-plugin-bp/admin` is for all admin-specific functionality
-* `wp-plugin-bp/public` is for all public-facing functionality
+* `wp-plugin-bp/front` is for all public-facing functionality
+* `wp-plugin-bp/includes` is where the autoloader lives
+* `wp-plugin-bp/languages` is where translation files are stored
 
-Note that previous versions of the Boilerplate did not include `Plugin_Name_Loader` but this class is used to register all filters and actions with WordPress.
+Note that previous versions of the Boilerplate did not include `Wp_Plugin_Bp_Loader` but this class is used to register all filters and actions with WordPress.
 
 The example code provided shows how to register your hooks with the Loader class.
 
@@ -84,7 +86,9 @@ The same is true of using tools like Grunt, Composer, etc. These are all fantast
 
 This WordPress Plugin Boilerplace adaption has been created by [Dan Pock](https://github.com/mallardduck) to include Namespaces and Autoloading into a what is an already excellent boilerplate.
 
-The WordPress Plugin Boilerplate was started in 2011 by [Tom McFarlin](http://twitter.com/tommcfarlin/) and has since included a number of great contributions. In March of 2015 the project was handed over by Tom to Devin Vinson.
+The WordPress compatible autoloader included was created in 2017 by [Tom McFarlin](http://twitter.com/tommcfarlin/) for a presentation at WordCamp Atlanta 2017.
+
+The original WordPress Plugin Boilerplate, which this is forked from, was started in 2011 by [Tom McFarlin](http://twitter.com/tommcfarlin/) and has since included a number of great contributions. In March of 2015 the project was handed over by Tom to Devin Vinson.
 
 The current version of the Boilerplate was developed in conjunction with [Josh Eaton](https://twitter.com/jjeaton), [Ulrich Pogson](https://twitter.com/grapplerulrich), and [Brad Vincent](https://twitter.com/themergency).
 

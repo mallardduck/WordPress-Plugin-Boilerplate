@@ -27,6 +27,35 @@ namespace Wp_Plugin_Bp\Lib;
  */
 class Wp_Plugin_Bp_i18n {
 
+	/**
+	 * The ID of this plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @var      string    $plugin_name    The ID of this plugin.
+	 */
+	private $plugin_name;
+
+	/**
+	 * Initialize the class and set its properties.
+	 *
+	 * @since    1.0.0
+	 * @param      string    $plugin_name       The name of the plugin.
+	 */
+	public function __construct( $plugin_name ) {
+		$this->plugin_name = $plugin_name;
+	}
+
+	/**
+	 * The name of the plugin used to uniquely identify it within the context of
+	 * WordPress and to define internationalization functionality.
+	 *
+	 * @since     1.0.0
+	 * @return    string    The name of the plugin.
+	 */
+	public function get_plugin_name() {
+		return $this->plugin_name;
+	}
 
 	/**
 	 * Load the plugin text domain for translation.
@@ -36,7 +65,7 @@ class Wp_Plugin_Bp_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'wp-plugin-bp',
+			$this->get_plugin_name(),
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

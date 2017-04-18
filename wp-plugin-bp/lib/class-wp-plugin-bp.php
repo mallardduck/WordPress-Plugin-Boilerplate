@@ -113,7 +113,7 @@ class Wp_Plugin_Bp {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Wp_Plugin_Bp_i18n();
+		$plugin_i18n = new Wp_Plugin_Bp_i18n( $this->get_plugin_name() );
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
