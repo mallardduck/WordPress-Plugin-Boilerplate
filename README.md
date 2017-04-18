@@ -1,6 +1,6 @@
 # WordPress Plugin Boilerplate
 
-A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
+A standardized, organized, object-oriented, namespaced, autoloading foundation for building high-quality WordPress Plugins.
 
 ## Contents
 
@@ -9,11 +9,11 @@ The WordPress Plugin Boilerplate includes the following files:
 * `.gitignore`. Used to exclude certain files from the repository.
 * `CHANGELOG.md`. The list of changes to the core project.
 * `README.md`. The file that you’re currently reading.
-* A `plugin-name` directory that contains the source code - a fully executable WordPress plugin.
+* A `wp-plugin-bp` directory that contains the source code - a fully executable WordPress plugin.
 
 ## Features
 
-* The Boilerplate is based on the [Plugin API](http://codex.wordpress.org/Plugin_API), [Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards), and [Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/).
+* The Boilerplate is based on the [Plugin API](http://codex.wordpress.org/Plugin_API), [Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards), and [Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/); though it may deviate in subtle ways when the situation calls for it.
 * All classes, functions, and variables are documented so that you know what you need to be changed.
 * The Boilerplate uses a strict file organization scheme that correspond both to the WordPress Plugin Repository structure, and that make it easy to organize the files that compose the plugin.
 * The project includes a `.pot` file as a starting point for internationalization.
@@ -26,7 +26,7 @@ Note that this will activate the source code of the Boilerplate, but because the
 
 ## WordPress.org Preparation
 
-The original launch of this version of the boilerplate included the folder structure needed for using your plugin on the WordPress.org. That folder structure has been moved to its own repo here: https://github.com/DevinVinson/Plugin-Directory-Boilerplate
+Coming Soon
 
 ## Recommended Tools
 
@@ -64,9 +64,9 @@ For reference, [here's a discussion](http://make.wordpress.org/themes/2013/03/04
 
 Note that if you include your own classes, or third-party libraries, there are three locations in which said files may go:
 
-* `plugin-name/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
-* `plugin-name/admin` is for all admin-specific functionality
-* `plugin-name/public` is for all public-facing functionality
+* `wp-plugin-bp/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
+* `wp-plugin-bp/admin` is for all admin-specific functionality
+* `wp-plugin-bp/public` is for all public-facing functionality
 
 Note that previous versions of the Boilerplate did not include `Plugin_Name_Loader` but this class is used to register all filters and actions with WordPress.
 
@@ -82,12 +82,10 @@ The same is true of using tools like Grunt, Composer, etc. These are all fantast
 
 # Credits
 
+This WordPress Plugin Boilerplace adaption has been created by [Dan Pock](https://github.com/mallardduck) to include Namespaces and Autoloading into a what is an already excellent boilerplate.
+
 The WordPress Plugin Boilerplate was started in 2011 by [Tom McFarlin](http://twitter.com/tommcfarlin/) and has since included a number of great contributions. In March of 2015 the project was handed over by Tom to Devin Vinson.
 
 The current version of the Boilerplate was developed in conjunction with [Josh Eaton](https://twitter.com/jjeaton), [Ulrich Pogson](https://twitter.com/grapplerulrich), and [Brad Vincent](https://twitter.com/themergency).
 
 The homepage is based on a design as provided by [HTML5Up](http://html5up.net), the Boilerplate logo was designed by  Rob McCaskill of [BungaWeb](http://bungaweb.com), and the site `favicon` was created by [Mickey Kay](https://twitter.com/McGuive7).
-
-## Documentation, FAQs, and More
-
-If you’re interested in writing any documentation or creating tutorials please [let me know](http://devinvinson.com/contact/) .
