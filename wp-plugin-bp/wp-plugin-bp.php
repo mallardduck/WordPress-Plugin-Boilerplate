@@ -24,19 +24,27 @@
  * Text Domain:       plugin-name
  * Domain Path:       /languages
  */
+namespace Wp_Plugin_Bp;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+// Include the autoloader so we can dynamically include the rest of the classes.
+require_once(trailingslashit(dirname(__FILE__)) . 'includes/autoloader.php');
+
+use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp;
+use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Activator;
+use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Deactivator;
+
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-plugin-name-activator.php
  */
 function activate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
-	Plugin_Name_Activator::activate();
+	Wp_Plugin_Bp_Activator::activate();
 }
 
 /**
@@ -44,18 +52,17 @@ function activate_plugin_name() {
  * This action is documented in includes/class-plugin-name-deactivator.php
  */
 function deactivate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
+	Wp_Plugin_Bp_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
+register_activation_hook( __FILE__, __NAMESPACE__ . '\\activate_plugin_name' );
+register_deactivation_hook( __FILE__, __NAMESPACE__ . '\\deactivate_plugin_name' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
+add_action('plugins_loaded', __NAMESPACE__ . '\\run_newer_tag_cloud');
 
 /**
  * Begins execution of the plugin.
@@ -68,8 +75,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
  */
 function run_plugin_name() {
 
-	$plugin = new Plugin_Name();
+	$plugin = new Wp_Plugin_Bp();
 	$plugin->run();
 
 }
-run_plugin_name();
