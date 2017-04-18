@@ -55,6 +55,17 @@ class Wp_Plugin_Bp_Admin {
 
 	}
 
+    /**
+	 * The name of the plugin used to uniquely identify it within the context of
+	 * WordPress and to define internationalization functionality.
+	 *
+	 * @since     1.0.0
+	 * @return    string    The name of the plugin.
+	 */
+	public function get_plugin_name() {
+		return $this->plugin_name;
+	}
+
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
@@ -100,5 +111,36 @@ class Wp_Plugin_Bp_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-plugin-bp-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+
+    /**
+     * Register the options page for the admin area.
+     *
+     * @since    1.0.0
+     */
+    public function register_admin_pages()
+    {
+        add_menu_page('WP Plugin BP', 'WordPress Plugin Boilerplate', 'manage_options', $this->plugin_name, [$this, 'main_options_page']);
+        add_submenu_page($this->plugin_name, 'WP Plugin BP Subpage', 'Subpage Options', 'manage_options', $this->plugin_name."/subpage", [$this, 'options_sub_page']);
+    }
+
+    /**
+     * Create the options page for the admin area.
+     *
+     * @since    1.0.0
+     */
+    public function main_options_page()
+    {
+        require __DIR__ . '/partials/'.$this->plugin_name.'-admin-display.php';
+    }
+
+    /**
+    * Create the options page for the admin area.
+    *
+    * @since    1.0.0
+    */
+    public function options_sub_page()
+    {
+        require __DIR__ . '/partials/'.$this->plugin_name.'-admin-display.php';
+    }
 
 }
