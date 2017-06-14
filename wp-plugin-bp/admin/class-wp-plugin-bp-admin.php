@@ -119,8 +119,8 @@ class Wp_Plugin_Bp_Admin {
      */
     public function register_admin_pages()
     {
-        add_menu_page('WP Plugin BP', 'WordPress Plugin Boilerplate', 'manage_options', $this->plugin_name, [$this, 'main_options_page']);
-        add_submenu_page($this->plugin_name, 'WP Plugin BP Subpage', 'Subpage Options', 'manage_options', $this->plugin_name."/subpage", [$this, 'options_sub_page']);
+        add_menu_page('WordPress Plugin Boilerplate', 'WordPress Plugin Boilerplate', 'manage_options', $this->plugin_name, [$this, 'main_options_page']);
+        add_submenu_page($this->plugin_name, 'WordPress Plugin Boilerplate Subpage', 'Subpage Options', 'manage_options', $this->plugin_name."-subpage", [$this, 'options_sub_page']);
     }
 
     /**

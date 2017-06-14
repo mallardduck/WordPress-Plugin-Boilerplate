@@ -21,7 +21,7 @@
  * Author URI:        http://example.tld/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       plugin-name
+ * Text Domain:       wp-plugin-bp
  * Domain Path:       /languages
  */
 namespace Wp_Plugin_Bp;
@@ -41,7 +41,7 @@ use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Deactivator;
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
+ * This action is documented in includes/class-wp-plugin-bp-activator.php
  */
 function activate_wp_plugin_bp() {
 	Wp_Plugin_Bp_Activator::activate();
@@ -49,7 +49,7 @@ function activate_wp_plugin_bp() {
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
+ * This action is documented in includes/class-wp-plugin-bp-deactivator.php
  */
 function deactivate_wp_plugin_bp() {
 	Wp_Plugin_Bp_Deactivator::deactivate();

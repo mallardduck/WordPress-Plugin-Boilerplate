@@ -22,7 +22,7 @@
  * @link       http://example.tld
  * @since      1.0.0
  *
- * @package    Plugin_Name
+ * @package    Wp_Plugin_Bp
  */
 
 // If uninstall not called from WordPress, then exit.
