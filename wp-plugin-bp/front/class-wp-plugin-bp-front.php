@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       http://example.tld
  * @since      1.0.0
  *
  * @package    Wp_Plugin_Bp
@@ -19,7 +19,7 @@
  *
  * @package    Wp_Plugin_Bp
  * @subpackage Wp_Plugin_Bp\Front\Wp_Plugin_Bp_Front
- * @author     Your Name <email@example.com>
+ * @author     Your Name <email@example.tld>
  */
 class Wp_Plugin_Bp_Front {
 

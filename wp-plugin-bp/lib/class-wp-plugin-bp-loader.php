@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       http://example.tld
  * @since      1.0.0
  *
  * @package    Wp_Plugin_Bp
@@ -20,7 +20,7 @@ namespace Wp_Plugin_Bp\Lib;
  *
  * @package    Wp_Plugin_Bp
  * @subpackage Wp_Plugin_Bp\Lib
- * @author     Your Name <email@example.com>
+ * @author     Your Name <email@example.tld>
  */
 class Wp_Plugin_Bp_Loader {
 

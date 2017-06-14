@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
+ * @link       http://example.tld
  * @since      1.0.0
  *
  * @package    Wp_Plugin_Bp
@@ -23,7 +23,7 @@ namespace Wp_Plugin_Bp\Lib;
  * @since      1.0.0
  * @package    Wp_Plugin_Bp
  * @subpackage Wp_Plugin_Bp\Lib
- * @author     Your Name <email@example.com>
+ * @author     Your Name <email@example.tld>
  */
 class Wp_Plugin_Bp_i18n {
 

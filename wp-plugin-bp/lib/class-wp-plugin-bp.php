@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://example.com
+ * @link       http://example.tld
  * @since      1.0.0
  *
  * @package    Wp_Plugin_Bp
@@ -29,7 +29,7 @@ use Wp_Plugin_Bp\Front\Wp_Plugin_Bp_Front;
  * @since      1.0.0
  * @package    Wp_Plugin_Bp
  * @subpackage Wp_Plugin_Bp\Lib
- * @author     Your Name <email@example.com>
+ * @author     Your Name <email@example.tld>
  */
 class Wp_Plugin_Bp {
 
