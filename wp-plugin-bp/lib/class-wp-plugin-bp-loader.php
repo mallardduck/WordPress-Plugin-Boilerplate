@@ -46,7 +46,7 @@ class Wp_Plugin_Bp_Loader {
 	 *
 	 * @since 1.0.0
 	 * @access private
-	 * @var object|Plugin_Name_Loader
+	 * @var object|\Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Loader
 	 */
 	private static $instance;
 
@@ -179,11 +179,11 @@ class Wp_Plugin_Bp_Loader {
 	 * Get an instance of this class
 	 *
 	 * @since 1.0.0
-	 * @return object|\Plugin_Name_Loader
+	 * @return object|\Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Loader
 	 */
 	public static function get_instance() {
 		if( is_null( self::$instance ) ) {
-			self::$instance = new Plugin_Name_Loader();
+			self::$instance = new Wp_Plugin_Bp_Loader();
 		}
 
 		return self::$instance;
