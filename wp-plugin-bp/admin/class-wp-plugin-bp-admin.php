@@ -71,7 +71,7 @@ class Wp_Plugin_Bp_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles($hook) {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -80,10 +80,14 @@ class Wp_Plugin_Bp_Admin {
 		 * defined in Plugin_Name_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The Wp_Plugin_Bp_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
-		 */
+         *
+         * You can use the $hook parameter to filter for a particular page,
+         * for more information see the codex,
+         * https://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
+         */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wp-plugin-bp-admin.css', array(), $this->version, 'all' );
 
@@ -94,7 +98,7 @@ class Wp_Plugin_Bp_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts($hook) {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -103,7 +107,7 @@ class Wp_Plugin_Bp_Admin {
 		 * defined in Plugin_Name_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The Wp_Plugin_Bp_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
