@@ -22,7 +22,7 @@ The WordPress Plugin Boilerplate includes the following files:
 
 The Boilerplate can be installed directly into your plugins folder "as-is". You will want to rename it and the classes inside of it to fit your needs.
 
-Note that this will activate the source code of the Boilerplate, but because the Boilerplate has no real functionality so no menu  items, meta boxes, or custom post types will be added.
+Note that this will activate the source code of the Boilerplate, but because the Boilerplate has no real functionality not much will be added when activated. That's what you next adventure is, now go forth and build!
 
 ## WordPress.org Preparation
 
@@ -76,11 +76,7 @@ The example code provided shows how to register your hooks with the Loader class
 
 ### What About Other Features?
 
-The previous version of the WordPress Plugin Boilerplate included support for a number of different projects such as the [GitHub Updater](https://github.com/afragen/github-updater).
-
-These tools are not part of the core of this Boilerplate, as I see them as being additions, forks, or other contributions to the Boilerplate.
-
-The same is true of using tools like Grunt, Composer, etc. These are all fantastic tools, but not everyone uses them. In order to  keep the core Boilerplate as light as possible, these features have been removed and will be introduced in other editions, and will be listed and maintained on the project homepage
+Tools like Grunt, Composer, etc, are all fantastic tools, but not everyone uses them. In order to  keep the core Boilerplate as light as possible, these features have been removed and will be introduced in other editions, and will be listed and maintained on the project homepage.
 
 # Credits
 
@@ -88,8 +84,6 @@ This WordPress Plugin Boilerplace adaption has been created by [Dan Pock](https:
 
 The WordPress compatible autoloader included was created in 2017 by [Tom McFarlin](http://twitter.com/tommcfarlin/) for a presentation at WordCamp Atlanta 2017.
 
-The original WordPress Plugin Boilerplate, which this is forked from, was started in 2011 by [Tom McFarlin](http://twitter.com/tommcfarlin/) and has since included a number of great contributions. In March of 2015 the project was handed over by Tom to Devin Vinson.
+The original WordPress Plugin Boilerplate, which this is forked from, was started in 2011 by [Tom McFarlin](http://twitter.com/tommcfarlin/) and has since included a number of great contributions.
 
-The current version of the Boilerplate was developed in conjunction with [Josh Eaton](https://twitter.com/jjeaton), [Ulrich Pogson](https://twitter.com/grapplerulrich), and [Brad Vincent](https://twitter.com/themergency).
-
-The homepage is based on a design as provided by [HTML5Up](http://html5up.net), the Boilerplate logo was designed by  Rob McCaskill of [BungaWeb](http://bungaweb.com), and the site `favicon` was created by [Mickey Kay](https://twitter.com/McGuive7).
+In March of 2015 the project was handed over by Tom to Devin Vinson. This version of the Boilerplate was developed in conjunction with [Josh Eaton](https://twitter.com/jjeaton), [Ulrich Pogson](https://twitter.com/grapplerulrich), and [Brad Vincent](https://twitter.com/themergency).
