@@ -99,7 +99,7 @@ class Wp_Plugin_Bp {
 	 * @access   private
 	 */
 	private function load_dependencies() {
-		$this->loader = Plugin_Name_Loader::get_instance();
+		$this->loader = Wp_Plugin_Bp_Loader::get_instance();
 	}
 
 	/**
