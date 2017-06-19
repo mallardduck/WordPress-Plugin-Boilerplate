@@ -55,4 +55,6 @@ Once you have completed these 9 steps you will be able to begin creating your pl
 
   Note: Generally this should always match the WordPress.org URL to the plugin, however you provide any URL so long as it's related to the plugin. E.G. a landing page for the plugin.
 
+---
+
 You are now complete with setting up the initial plugin code and base structure. You can begin building out your plugin once you've initialized you Git repo, unless you did that as part of step 1. Either way, you'll initialize (or commit to) your repo and then begin creating!
