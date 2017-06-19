@@ -51,6 +51,8 @@ Then, you can finally begin updating the various plugin files with your code to 
 
 Obviously you'll want to track your plugin in revision control like Git of SVN. The best way to handle this is by initializing your plugin repository in the base plugin folder after you rename it. You can choose to do this initially when you start (before step one), or after you have completed the setup steps above.
 
+For directions with Sed examples see here: [setup-with-sed](docs/setup-with-sed.md)
+
 ## WordPress.org Preparation
 
 Coming Soon
