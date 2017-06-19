@@ -39,12 +39,13 @@ Note that this will activate the source code of the Boilerplate, but because the
 First things first, download the reposityr and rename the `wp-plugin-bp` folder to one matching the name of the plugin you're creating. Something like `'my-awesome-plugin'` would match the plugin called `My Awesome Plugin`. Then proceed by following the seven-stop process that follows:
 
 1. Search for `'wp-plugin-bp'` and replace with `'my-awesome-plugin'`
-2. Search for `'WordPress Plugin Boilerplate'` and replace with `'My Awesome Plugin'`
-3. Search for `'Your Name or Your Company'` and replace with `'Awesome Company Inc.'`
-4. Search for `'Your Name <email@example.tld>'` and replace with `'Awesome Guy <guy@awesome.tld>'`
-5. Search for `'Wp_Plugin_Bp'` and replace with `'My_Awesome_Plugin'`
-6. Search for `'http://example.tld/'` and replace with `'http://awesome.tld/'`
-7. Search for `'wp_plugin_bp'` and replace with `'my_awesome_plugin'`
+2. Search for `'Wp_Plugin_Bp'` and replace with `'My_Awesome_Plugin'`
+3. Search for `'wp_plugin_bp'` and replace with `'my_awesome_plugin'`
+4. Search for `'WordPress Plugin Boilerplate'` and replace with `'My Awesome Plugin'`
+5. Search for `'Your Name or Your Company'` and replace with `'Awesome Guy'`
+6. Search for `'Your Name <email@example.tld>'` and replace with `'Awesome Guy <guy@awesome.tld>'`
+7. Search for `'http://example.tld/'` and replace with `'http://awesome.tld/'`
+8. Finally, open your main plugin file and update the `Plugin URI` field to match the specific URL for the plugin.
 
 Then, you can finally begin updating the various plugin files with your code to create your plugin!
 
