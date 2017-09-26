@@ -34,17 +34,12 @@ if ( ! defined( 'WPINC' ) ) {
 // Include the autoloader so we can dynamically include the rest of the classes.
 require_once(trailingslashit(dirname(__FILE__)) . 'includes/autoloader.php');
 
-use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp;
-use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Activator;
-use Wp_Plugin_Bp\Lib\Wp_Plugin_Bp_Deactivator;
-
-
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wp-plugin-bp-activator.php
  */
 function activate_wp_plugin_bp() {
-	Wp_Plugin_Bp_Activator::activate();
+	Lib\Wp_Plugin_Bp_Activator::activate();
 }
 
 /**
@@ -52,7 +47,7 @@ function activate_wp_plugin_bp() {
  * This action is documented in includes/class-wp-plugin-bp-deactivator.php
  */
 function deactivate_wp_plugin_bp() {
-	Wp_Plugin_Bp_Deactivator::deactivate();
+	Lib\Wp_Plugin_Bp_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, __NAMESPACE__ . '\\activate_wp_plugin_bp' );
@@ -75,7 +70,7 @@ add_action('plugins_loaded', __NAMESPACE__ . '\\run_plugin_name');
  */
 function run_plugin_name() {
 
-	$plugin = new Wp_Plugin_Bp();
+	$plugin = new Lib\Wp_Plugin_Bp();
 	$plugin->run();
 
 }
